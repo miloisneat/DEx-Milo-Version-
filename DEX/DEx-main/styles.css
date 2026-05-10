@@ -1,0 +1,481 @@
+@font-face {
+    font-family: "modenine";
+    src: url('./fonts/modenine-font/Modenine-2OPd.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/********************************************************************************
+* Global Classes 
+********************************************************************************/
+
+.dexLogo {
+    font-family: monospace;
+    white-space: pre;
+}
+
+.pageTitle {
+    font-family: modenine, monospace;
+}
+
+.fieldFont {
+    font-family: modenine, monospace;
+}
+
+
+/********************************************************************************
+* index.html
+********************************************************************************/
+
+#indexBody {
+    font-family: modenine, monospace;
+    background-color: #CCCCCC;
+}
+
+#loginContainer {
+    border-style: solid;
+    height: 600px; /* gave more height and width so there could be room for another container */
+    width: 700px; 
+    margin: auto;
+    margin-top: 15vh;
+    text-align: center;
+    position: relative;
+}
+
+#smallLogo {
+    font-size: 90px;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 6vh;
+}
+
+#motto {
+    font-style: italic;
+    font-size: 12px;
+    margin-top: 0;
+}
+
+#loginLabel {
+    margin-top: 4vh;
+    margin-bottom: 2vh;
+    font-weight: normal;
+}
+
+#operatorInfoContainer {
+    margin: auto;
+    width: 450px;
+    padding: 4px;
+}
+
+#operatorIDLabel {
+    margin-bottom: 1vh;
+    text-align: left;
+}
+/* added username and password as seperate styles and Id's */
+
+#usernameInputBox {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    width: 441.5px;
+    height: 45px;
+    margin: auto;
+    font-size: 25px;
+    font-family: modenine;
+    text-transform: uppercase;
+    background-color: #DBDBDB;
+}
+
+#passwordInputBox {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    width: 441.5px;
+    height: 45px;
+    margin: auto;
+    font-size: 25px;
+    font-family: modenine;
+    text-transform: uppercase;
+    background-color: #DBDBDB;
+}
+
+#loginBtn {
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    font-family: modenine;
+    font-size: 20px;
+    width: 100px;
+    height: 50px;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.9);
+    transition: all 0.15s ease;
+    position: relative;
+}
+
+#loginBtn:hover {
+    background-color: black;
+    color: white;
+}
+
+#loginBtn:active {
+    transform: translate(3px, 3px);
+    box-shadow: none;
+}
+
+#systemVersionLabel {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    margin: 0;
+}
+
+/********************************************************************************
+* main_hub.html
+********************************************************************************/
+
+@keyframes blinkBW {
+    0%, 49% {
+        background-color: white;
+    }
+    50%, 100% {
+        background-color: black;
+    }
+}
+
+#hubBody {
+    padding-top: 20px;
+    background-color: #CCCCCC;
+}
+
+#cornerLogo {
+    font-weight: bold;
+    font-size: 10px;
+}
+
+#mainContainer {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    font-family: modenine, monospace;
+}
+
+#welcomeMessage {
+    margin-top: 12vh;
+    font-size: 25px;
+    margin-bottom: 8vh;
+}
+
+#buttonsContainer {
+    /* display: flex;
+    justify-content: center; */
+}
+
+#viewerBtn {
+    display: block;
+}
+
+.buttonStyle {
+    /*
+    font-size: 30px;
+    font-family: "modenine", monospace;
+    border-style: solid;
+    border-width: 1px;
+    margin: auto;
+    width: 400px;
+    height: 300px;
+    margin-bottom: 45px;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.9);
+    transition: all 0.15s ease;
+    position: relative;
+    */
+    
+    font-size: 34px;
+    font-family: "modenine", monospace;
+    border-style: solid;
+    border-width: 1px;
+    margin: auto;
+    width: 250px;
+    height: 150px;
+    margin-bottom: 45px;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.9);
+    transition: all 0.15s ease;
+
+}
+
+.buttonStyle:hover {
+    background-color: black;
+    color: white;
+}
+
+.buttonStyle:active {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+}
+
+.buttonStyle:hover::after {
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 1.2em;
+    margin-left: 6px;
+    background-color: white;
+    vertical-align: bottom;
+    animation: blinkBW 0.8s steps(1, end) infinite;
+}
+
+#activeUserContainer {
+    position: absolute;
+    top: 1vh;
+    right: .5vw;
+    border-style: solid;
+    border-width: 1px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+}
+
+#operatorID {
+    margin-top: 1vh;
+    display: block;
+    font-family: modenine, monospace;
+}
+
+#signOutBtn {
+    display: block;
+    font-family: modenine, monospace;
+    margin: auto;
+}
+
+/********************************************************************************
+* form_editor.html
+********************************************************************************/
+
+#formBuilderBody {
+    font-family: modenine;
+    background-color: #CCCCCC;
+}
+
+
+/********************************************************************************
+* input_records.html
+********************************************************************************/
+
+#inputBody {
+    font-family: modenine, monospace;
+    background-color: #CCCCCC;
+}
+
+#centerPanel {
+    position: absolute;
+    top: 20%;
+    left: 32.5%;
+}
+
+#formPanel {
+    width: 35vw;
+    border-style: double;
+    position: relative;
+    padding: 4px;
+    background-color: #CCCCCC;
+}
+
+.panelHeader {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    background-color: #CCCCCC;
+    transform: translateX(-50%);
+    padding: 0 12px;
+}
+
+.functionality {
+    margin: 0;
+    width: fit-content;
+    background-color: black;
+    color: white;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.bottomContainer {
+    width: 99.85%;
+}
+
+#modeOptions {
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 3.5vh;
+}
+
+#statusBar {
+    background-color: black;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    font-style: italic;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#statusBarOutput {
+    margin: 0;
+    font-size: 20px;
+
+    
+}
+
+#formSelectorContainer {
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: modenine, monospace;
+}
+
+#formSelector {
+    width: 350px;
+    padding: 8px;
+    font-family: modenine, monospace;
+    background-color: #CCCCCC;
+    border: 2px solid black;
+    box-shadow: 4px 4px 0 black;
+}
+
+#formSelector:hover {
+    background-color: #f2f2f2;
+}
+
+#formSelector:focus {
+    background-color: white;
+    box-shadow: 2px 2px 0 black;
+    transform: translate(2px, 2px);
+}
+
+#returnBtnIR {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 8px 16px;
+    font-family: modenine, monospace;
+    font-size: 14px;
+
+    background-color: #CCCCCC;
+    color: black;
+
+    border: 2px solid black;
+    box-shadow: 4px 4px 0 black;
+
+    cursor: pointer;
+}
+
+#returnBtnIR:hover {
+    background-color: #f2f2f2;
+}
+
+#returnBtnIR:active {
+    box-shadow: 2px 2px 0 black;
+    transform: translateX(-50%) translate(2px, 2px);
+}
+/********************************************************************************
+* verify_records.html
+********************************************************************************/
+
+
+
+/********************************************************************************
+* viewer.html
+********************************************************************************/
+
+#viewerBody {
+    font-family: modenine, monospace;
+    background-color: #CCCCCC;
+}
+
+#viewerContainer {
+    border-style: solid;
+    height: 600px;
+    width: 700px;
+    margin: auto;
+    margin-top: 15vh;
+    text-align: center;
+    position: relative;
+}
+
+#forms {
+    width: 450px;
+    padding: 4px;
+    margin-top: 20px;
+}
+
+#dropdownForms {
+    width: 580px;
+    margin: 40px auto 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#dropdownForms label {
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+#forms {
+    flex: 1;
+    padding: 8px 10px;
+    font-family: modenine, monospace;
+    font-size: 13px;
+
+    background-color: #e6e6e6;
+    color: black;
+
+    border: 2px solid black;
+    outline: none;
+    cursor: pointer;
+
+    box-shadow: 4px 4px 0 black;
+}
+
+#forms:hover {
+    background-color: #f2f2f2;
+}
+
+#forms:focus {
+    background-color: white;
+    box-shadow: 2px 2px 0 black;
+    transform: translate(2px, 2px);
+}
+
+#returnBtn {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 8px 16px;
+    font-family: modenine, monospace;
+    font-size: 13px;
+
+    background-color: #e6e6e6;
+    color: black;
+
+    border: 2px solid black;
+    box-shadow: 4px 4px 0 black;
+
+    cursor: pointer;
+}
+
+
+#returnBtn:hover {
+    background-color: #f2f2f2;
+}
+
+#returnBtn:active {
+    box-shadow: 2px 2px 0 black;
+    transform: translateX(-50%) translate(2px, 2px);
+}
