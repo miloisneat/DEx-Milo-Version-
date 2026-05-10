@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="imgs/keyboard.ico">
+        <link rel="stylesheet" href="styles.css">
+        <title>DEX: Input Records</title>
+    </head>
+
+    <body id="inputBody">
+
+        <div id="centerPanel"></div>
+
+        <h1 class="pageTitle" id="formTitle">Input Records</h1>
+
+        <!-- Dropdown area for choosing a form -->
+        <div id="formSelectorContainer">
+            <label for="formSelector">Choose a form:</label>
+
+            <select id="formSelector">
+                <option value="">-- Select a form --</option>
+            </select>
+        </div>
+        <button id="returnBtnIR">Return</button>
+        <form class="fieldFont" id="recordForm"></form>
+
+        
+
+        <div class="bottomContainer" id="modeOptions"></div>
+
+        <div class="bottomContainer" id="statusBar">
+            <h1 id="statusBarOutput"></h1>
+        </div>
+
+        <!-- Script -->
+        <script type="module" src="js/input_records.js"></script>
+    </body>
+</html>

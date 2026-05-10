@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+        <link rel="stylesheet" href="styles.css">
+        <title>DEX: Home</title>
+    </head>
+
+    <body id="hubBody">
+        <div id="cornerLogo">
+            <pre>
+ ██████╗ ███████╗██╗  ██╗
+ ██╔══██╗██╔════╝╚██╗██╔╝
+ ██║  ██║█████╗   ╚███╔╝ 
+ ██║  ██║██╔══╝   ██╔██╗ 
+ ██████╔╝███████╗██╔╝ ██╗
+ ╚═════╝ ╚══════╝╚═╝  ╚═╝
+            </pre>
+        </div>
+        <div id="mainContainer">
+            <p id="welcomeMessage">
+                This is the homepage. From here you can choose to create a form
+                or edit records.
+            </p>
+
+            <div id="buttonsContainer">
+                <button id="formBuilderBtn" class="buttonStyle">Form Builder</button>
+                <button id="inputRecordsBtn" class="buttonStyle">Input Records</button>
+                <button id="verifyRecordsBtn" class="buttonStyle">Verify Records</button>
+                <button id="viewerBtn" class="buttonStyle">Viewer</button>
+            </div>
+        </div>
+
+        <div id="activeUserContainer">
+            <label id="operatorID"></label>
+            <button id="signOutBtn">Sign Out</button>
+        </div>
+
+
+        <!-- Scripts -->
+        <script type="module" src="js/main_hub.js"></script>
+    </body>
+</html>
