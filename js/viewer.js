@@ -1,8 +1,16 @@
 const formsDropdown = document.getElementById("forms");
 const returnBtn = document.getElementById("returnBtn");
+const formPreview = document.getElementById("formPreview")
+
 
 // get saved forms from localStorage
 const savedForms = JSON.parse(localStorage.getItem("forms")) || [];
+
+// if no forms exist
+if (savedForms.length === 0) {
+    alert("No forms found. Please create a form first.");
+    window.location.href = "main_hub.html"
+}
 
 // add each saved form to the dropdown
 savedForms.forEach(form => {
@@ -12,20 +20,61 @@ savedForms.forEach(form => {
     formsDropdown.appendChild(option);
 });
 
-// when a form is selected
+// when a form is selected, display it
 formsDropdown.addEventListener("change", () => {
     const selectedFormId = Number(formsDropdown.value);
 
     const selectedForm = savedForms.find(form => form.id === selectedFormId);
 
     if (!selectedForm) {
-        console.log("No form selected");
+       formPreview.innerHTML = "";
         return;
     }
+    displayForm(selectedForm)
 
-    localStorage.setItem("selectedFormId", selectedFormId);
-    console.log(selectedForm);
 });
+
+//Display selected form
+function displayForm(form) {
+    formPreview.innerHTML = "";
+
+    const title = document.createElement("h2");
+    title.textContent = form.formName;
+    formPreview.appendChild(title);
+
+    form.fields.forEach(field => {
+        const fieldBox = document.createElement("div");
+        fieldBox.className = "previewField";
+
+        const label = document.createElement("label");
+        label.textContent = field.label + ":";
+
+        let input;
+
+        if (field.type === "select") {
+            input = document.createElement("select");
+
+            field.options.forEach(optionText => {
+                const option = document.createElement("option");
+                option.value = optionText;
+                option.textContent = optionText;
+                input.appendChild(option);
+
+            });
+        } else {
+            input = document.createElement("input");
+            input.type = field.type === "number" ? "number" : "text";
+        }
+
+        //viewer only previews the forms. fields are disabled
+        input.disabled = true;
+
+        fieldBox.appendChild(label);
+        fieldBox.appendChild(input);
+
+        formPreview.appendChild(fieldBox);
+    })
+}
 
 // return button
 returnBtn.addEventListener("click", () => {
